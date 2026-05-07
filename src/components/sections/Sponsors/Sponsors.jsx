@@ -4,7 +4,7 @@
 
 import styles from './Sponsors.module.css';
 
-import lovableLogo from '../../../assets/logos/lovablel.png';
+import lovableLogo from '../../../assets/logos/lovable.png';
 import tavilyLogo from '../../../assets/logos/Tavily.png';
 import seedlegalsLogo from '../../../assets/logos/SeedLegals.png';
 import redbullLogo from '../../../assets/logos/RedBull.png';
