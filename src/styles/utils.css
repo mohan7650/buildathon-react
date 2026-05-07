@@ -1,0 +1,134 @@
+/* ============================================
+   BUILDATHON — Utility Classes
+   utils.css
+   ============================================ */
+
+/* ── Container ── */
+.container {
+  max-width: var(--container-xl);
+  margin: 0 auto;
+  padding: 0 32px;
+}
+
+@media (max-width: 760px) {
+  .container {
+    padding: 0 20px;
+  }
+}
+
+/* ── Section head ── */
+.section-head {
+  max-width: 780px;
+  margin: 0 auto 72px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 18px;
+}
+
+@media (max-width: 760px) {
+  .section-head {
+    margin-bottom: 48px;
+    gap: 14px;
+  }
+}
+
+/* ── Eyebrow ── */
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  font-weight: 500;
+}
+
+.eyebrow .dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent-3);
+  box-shadow: 0 0 10px var(--accent-3);
+  animation: pulse 2.4s ease-in-out infinite;
+}
+
+/* ── Lede ── */
+.lede {
+  color: var(--text-dim);
+  font-size: var(--text-md);
+  line-height: 1.72;
+  max-width: 600px;
+}
+
+/* ── Tag ── */
+.tag {
+  padding: 4px 10px;
+  border-radius: var(--r-full);
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--line);
+  font-size: var(--text-xs);
+  font-family: var(--font-mono);
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+}
+
+/* ── Button base ── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 13px 22px;
+  border-radius: var(--r-full);
+  font-weight: 600;
+  font-size: var(--text-base);
+  letter-spacing: -0.01em;
+  transition: transform var(--transition-base),
+    box-shadow var(--transition-base),
+    background var(--transition-base),
+    border-color var(--transition-base);
+  will-change: transform;
+}
+
+.btn .arrow {
+  transition: transform var(--transition-base);
+}
+
+.btn:hover .arrow {
+  transform: translateX(4px);
+}
+
+.btn-primary {
+  background: #ffffff;
+  color: #0b0f19;
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.55) inset,
+    0 18px 34px rgba(255, 255, 255, 0.08);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.65) inset,
+    0 22px 44px rgba(255, 255, 255, 0.12);
+}
+
+.btn-ghost {
+  background: rgba(255, 255, 255, 0.035);
+  border: 1px solid var(--line-strong);
+  color: var(--text);
+  backdrop-filter: blur(8px);
+}
+
+.btn-ghost:hover {
+  background: rgba(255, 255, 255, 0.07);
+  border-color: rgba(229, 231, 235, 0.22);
+  transform: translateY(-2px);
+}
+
+/* ── Focus states for buttons ── */
+.btn:focus-visible {
+  outline: 2px solid var(--accent-2);
+  outline-offset: 3px;
+}
