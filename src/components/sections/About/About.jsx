@@ -14,7 +14,7 @@ const PILLARS = [
       </svg>
     ),
     title: 'Build with intent',
-    desc: 'Clear tracks, focused briefs, and challenges that deserve more than a weekend prototype.',
+    desc: 'Clear tracks, focused briefs, and challenges built for real-world execution.',
   },
   {
     id: 'match',
