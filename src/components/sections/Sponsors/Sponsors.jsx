@@ -14,19 +14,6 @@ import seedlegalsLogo from '../../../assets/logos/SeedLegals.png';
 import redbullLogo from '../../../assets/logos/RedBull.png';
 
 /* ============================================
-   University Logos
-============================================ */
-
-import riceLogo from '../../../assets/logos/rice.png';
-import smuLogo from '../../../assets/logos/smu.png';
-import baylorLogo from '../../../assets/logos/baylor.png';
-import houstonLogo from '../../../assets/logos/Houston.png';
-import texasHornLogo from '../../../assets/logos/texas_horn.png';
-import texasTechLogo from '../../../assets/logos/texas_tech.png';
-import untLogo from '../../../assets/logos/unt.png';
-import utdLogo from '../../../assets/logos/unt of texas_dallas.png';
-
-/* ============================================
    Sponsors
 ============================================ */
 
@@ -50,58 +37,12 @@ const sponsors = [
 ];
 
 /* ============================================
-   Universities
-============================================ */
-
-const universities = [
-  {
-    name: 'Rice University',
-    logo: riceLogo,
-  },
-  {
-    name: 'Southern Methodist University',
-    logo: smuLogo,
-  },
-  {
-    name: 'Baylor University',
-    logo: baylorLogo,
-  },
-  {
-    name: 'University of Houston',
-    logo: houstonLogo,
-  },
-  {
-    name: 'University of Texas',
-    logo: texasHornLogo,
-  },
-  {
-    name: 'Texas Tech University',
-    logo: texasTechLogo,
-  },
-  {
-    name: 'University of North Texas',
-    logo: untLogo,
-  },
-  {
-    name: 'University of Texas Dallas',
-    logo: utdLogo,
-  },
-];
-
-/* ============================================
    Component
 ============================================ */
 
 export default function Sponsors() {
   return (
-    <section
-      className={styles.section}
-      id="sponsors"
-    >
-
-      {/* ============================================
-         TOP SECTION
-      ============================================ */}
+    <section className={styles.section} id="sponsors">
 
       <div className={styles.wrapper}>
 
@@ -132,16 +73,12 @@ export default function Sponsors() {
               key={brand.name}
             >
 
-              <div className={styles.logoInner}>
-
-                <img
-                  src={brand.logo}
-                  alt={brand.name}
-                  className={styles.logo}
-                  loading="lazy"
-                />
-
-              </div>
+              <img
+                src={brand.logo}
+                alt={brand.name}
+                className={styles.logo}
+                loading="lazy"
+              />
 
             </div>
           ))}
@@ -159,41 +96,7 @@ export default function Sponsors() {
 
       </div>
 
-      {/* ============================================
-         UNIVERSITIES SECTION
-      ============================================ */}
-
-      <div className={styles.universitySection}>
-
-        <span className={styles.universityLabel}>
-          Universities
-        </span>
-
-        <div className={styles.universityGrid}>
-
-          {universities.map((uni) => (
-            <div
-              className={styles.universityCard}
-              key={uni.name}
-            >
-
-              <img
-                src={uni.logo}
-                alt={uni.name}
-                className={styles.universityLogo}
-                loading="lazy"
-              />
-
-            </div>
-          ))}
-
-        </div>
-
-      </div>
-
-      {/* ============================================
-         BOTTOM CTA
-      ============================================ */}
+      {/* Bottom CTA */}
 
       <div className={styles.bottomCard}>
 

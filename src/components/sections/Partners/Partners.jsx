@@ -1,18 +1,8 @@
 // ============================================
-// BUILDATHON — Partners Marquee Section
-// components/sections/Partners/Partners.jsx
+// BUILDATHON — University Partners Marquee
 // ============================================
 
 import styles from './Partners.module.css';
-
-/* ============================================
-   Brand Logo Imports
-============================================ */
-
-import lovable from '../../../assets/logos/lovable.png';
-import tavily from '../../../assets/logos/Tavily.png';
-import redbull from '../../../assets/logos/RedBull.png';
-import seedlegals from '../../../assets/logos/SeedLegals.png';
 
 /* ============================================
    University Logo Imports
@@ -29,32 +19,10 @@ import texasAM from '../../../assets/logos/texas a&m.png';
 import texasHorn from '../../../assets/logos/texas_horn.png';
 
 /* ============================================
-   Partners Data
+   Universities
 ============================================ */
 
-const partners = [
-
-  /* Brands */
-
-  {
-    name: 'Lovable',
-    logo: lovable,
-  },
-  {
-    name: 'Tavily',
-    logo: tavily,
-  },
-  {
-    name: 'Red Bull',
-    logo: redbull,
-  },
-  {
-    name: 'SeedLegals',
-    logo: seedlegals,
-  },
-
-  /* Universities */
-
+const universities = [
   {
     name: 'Rice University',
     logo: rice,
@@ -91,7 +59,6 @@ const partners = [
     name: 'University of Texas at Austin',
     logo: texasHorn,
   },
-
 ];
 
 /* ============================================
@@ -103,21 +70,23 @@ export default function Partners() {
     <section className={styles.section}>
 
       {/* Heading */}
+
       <div className={styles.heading}>
         Featuring partners & participants from elite institutions
       </div>
 
       {/* Marquee */}
+
       <div className={styles.marquee}>
 
         <div className={styles.track}>
 
-          {[...partners, ...partners].map((partner, index) => (
+          {[...universities, ...universities].map((uni, index) => (
             <div className={styles.card} key={index}>
 
               <img
-                src={partner.logo}
-                alt={partner.name}
+                src={uni.logo}
+                alt={uni.name}
                 className={styles.logo}
                 loading="lazy"
               />

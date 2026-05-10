@@ -1,167 +1,139 @@
 /* ============================================
-   BUILDATHON — Partners Section
-   components/sections/Partners/Partners.module.css
+   BUILDATHON — University Marquee
    ============================================ */
 
-.section {
-  position: relative;
-  overflow: hidden;
+.section{
+  position:relative;
 
-  padding: 96px 0;
+  overflow:hidden;
+
+  padding:88px 0;
 
   background:
     radial-gradient(
       circle at center,
-      rgba(37, 99, 235, 0.1),
+      rgba(37,99,235,.08),
       transparent 60%
     ),
     #050816;
 
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  border-top:1px solid rgba(255,255,255,.05);
+
+  border-bottom:1px solid rgba(255,255,255,.05);
 }
 
 /* ============================================
    Heading
    ============================================ */
 
-.heading {
-  text-align: center;
-  margin-bottom: 48px;
+.heading{
+  text-align:center;
 
-  color: #3b82f6;
+  margin-bottom:42px;
 
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.42em;
-  text-transform: uppercase;
+  color:#3b82f6;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:.42em;
+
+  text-transform:uppercase;
 }
 
 /* ============================================
-   Marquee Wrapper
+   Marquee
    ============================================ */
 
-.marquee {
-  position: relative;
-  overflow: hidden;
-  width: 100%;
+.marquee{
+  position:relative;
+
+  overflow:hidden;
+
+  width:100%;
 }
 
 /* ============================================
-   Animated Track
+   Track
    ============================================ */
 
-.track {
-  display: flex;
-  align-items: center;
-  gap: 64px;
+.track{
+  display:flex;
 
-  width: max-content;
+  align-items:center;
 
-  animation: scroll 42s linear infinite;
+  gap:16px;
+
+  width:max-content;
+
+  animation:scroll 42s linear infinite;
 }
 
-.track:hover {
-  animation-play-state: paused;
+.track:hover{
+  animation-play-state:paused;
 }
 
 /* ============================================
-   Sponsor Card
+   University Card
    ============================================ */
 
-.card {
-  width: 190px;
-  height: 96px;
+.card{
+  width:170px;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  height:82px;
 
-  flex-shrink: 0;
+  background:#ffffff;
 
-  padding: 16px;
+  border-radius:14px;
 
-  border-radius: var(--r-md);
+  display:flex;
+  align-items:center;
+  justify-content:center;
 
-  background: rgba(255, 255, 255, 0.015);
+  padding:14px;
 
-  border: 1px solid rgba(255, 255, 255, 0.04);
-
-  opacity: 0.82;
+  flex-shrink:0;
 
   transition:
-    opacity 0.25s ease,
-    transform 0.25s ease,
-    background 0.25s ease,
-    border-color 0.25s ease;
+    transform .28s ease,
+    box-shadow .28s ease;
 }
 
-.card:hover {
-  opacity: 1;
+.card:hover{
+  transform:translateY(-3px);
 
-  transform: translateY(-3px);
-
-  background: rgba(255, 255, 255, 0.03);
-
-  border-color: rgba(255, 255, 255, 0.08);
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.18);
 }
 
 /* ============================================
-   Logo
+   Logos
    ============================================ */
 
-.logo {
-  max-width: 145px;
-  max-height: 54px;
+.logo{
+  max-width:110px;
 
-  width: auto;
-  height: auto;
+  max-height:42px;
 
-  object-fit: contain;
+  width:auto;
+  height:auto;
 
-  transition:
-    transform 0.25s ease,
-    opacity 0.25s ease,
-    filter 0.25s ease;
-}
-
-.card:hover .logo {
-  transform: scale(1.06);
+  object-fit:contain;
 }
 
 /* ============================================
-   Rice Logo Special Fix
+   Animation
    ============================================ */
 
-.riceLogo {
-  max-width: 175px;
-  max-height: 72px;
+@keyframes scroll{
 
-  transform: scale(1.08);
+  from{
+    transform:translateX(0);
+  }
 
-  filter: brightness(1.2);
-}
-
-/* ============================================
-   Optional Logo Name
-   ============================================ */
-
-.name {
-  display: none;
-}
-
-/* ============================================
-   Infinite Scroll Animation
-   ============================================ */
-
-@keyframes scroll {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-50%); }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .track {
-    animation: none;
+  to{
+    transform:translateX(-50%);
   }
 }
 
@@ -169,65 +141,52 @@
    Tablet
    ============================================ */
 
-@media (max-width: 768px) {
+@media(max-width:768px){
 
-  .section {
-    padding: 64px 0;
+  .section{
+    padding:72px 0;
   }
 
-  .track {
-    gap: 48px;
+  .track{
+    gap:12px;
   }
 
-  .card {
-    width: 160px;
-    height: 82px;
+  .card{
+    width:150px;
+
+    height:72px;
   }
 
-  .logo {
-    max-width: 120px;
-    max-height: 44px;
-  }
+  .logo{
+    max-width:92px;
 
-  .riceLogo {
-    max-width: 145px;
-    max-height: 60px;
+    max-height:36px;
   }
-
 }
 
 /* ============================================
    Mobile
    ============================================ */
 
-@media (max-width: 480px) {
+@media(max-width:480px){
 
-  .heading {
-    font-size: 11px;
-    letter-spacing: 0.28em;
-    line-height: 1.8;
-    padding: 0 16px;
+  .heading{
+    font-size:10px;
+
+    letter-spacing:.28em;
+
+    line-height:1.8;
+
+    padding:0 16px;
   }
 
-  .track {
-    gap: 24px;
+  .card{
+    width:130px;
+
+    height:66px;
   }
 
-  .card {
-    width: 128px;
-    height: 64px;
-
-    padding: 10px;
+  .logo{
+    max-width:82px;
   }
-
-  .logo {
-    max-width: 96px;
-    max-height: 34px;
-  }
-
-  .riceLogo {
-    max-width: 108px;
-    max-height: 42px;
-  }
-
 }

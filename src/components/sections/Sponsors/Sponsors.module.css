@@ -9,7 +9,7 @@
 }
 
 /* ============================================
-   Top Layout
+   Layout
    ============================================ */
 
 .wrapper{
@@ -71,7 +71,7 @@
 }
 
 /* ============================================
-   Sponsors Grid
+   Grid
    ============================================ */
 
 .grid{
@@ -81,7 +81,7 @@
 }
 
 /* ============================================
-   Sponsor Card
+   Logo Card
    ============================================ */
 
 .logoCard{
@@ -93,7 +93,7 @@
   align-items:center;
   justify-content:center;
 
-  padding:20px;
+  padding:24px;
 
   background:
     linear-gradient(
@@ -120,32 +120,13 @@
 }
 
 /* ============================================
-   White Inner Logo Plate
-   ============================================ */
-
-.logoInner{
-  width:100%;
-  height:100%;
-
-  border-radius:20px;
-
-  background:white;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:18px;
-}
-
-/* ============================================
-   Sponsor Logos
+   Company Logos
    ============================================ */
 
 .logo{
-  max-width:130px;
+  max-width:150px;
 
-  max-height:48px;
+  max-height:54px;
 
   width:auto;
   height:auto;
@@ -170,91 +151,6 @@
   font-weight:600;
 
   color:white;
-}
-
-/* ============================================
-   Universities Section
-   ============================================ */
-
-.universitySection{
-  margin-top:96px;
-}
-
-.universityLabel{
-  display:inline-block;
-
-  margin-bottom:24px;
-
-  color:rgba(255,255,255,.62);
-
-  text-transform:uppercase;
-
-  letter-spacing:.22em;
-
-  font-size:11px;
-
-  font-weight:700;
-}
-
-/* ============================================
-   Universities Grid
-   ============================================ */
-
-.universityGrid{
-  display:grid;
-
-  grid-template-columns:repeat(6,1fr);
-
-  gap:14px;
-}
-
-/* ============================================
-   University Card
-   ============================================ */
-
-.universityCard{
-  height:82px;
-
-  background:#ffffff;
-
-  border-radius:14px;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  padding:14px;
-
-  border:1px solid rgba(255,255,255,.08);
-
-  transition:
-    transform .28s ease,
-    box-shadow .28s ease,
-    border-color .28s ease;
-}
-
-.universityCard:hover{
-  transform:translateY(-3px);
-
-  border-color:rgba(99,102,241,.24);
-
-  box-shadow:
-    0 8px 24px rgba(0,0,0,.18);
-}
-
-/* ============================================
-   University Logos
-   ============================================ */
-
-.universityLogo{
-  max-width:110px;
-
-  max-height:42px;
-
-  width:auto;
-  height:auto;
-
-  object-fit:contain;
 }
 
 /* ============================================
@@ -349,10 +245,6 @@
     flex-direction:column;
     align-items:flex-start;
   }
-
-  .universityGrid{
-    grid-template-columns:repeat(4,1fr);
-  }
 }
 
 /* ============================================
@@ -380,26 +272,12 @@
     padding:32px;
   }
 
-  .universityGrid{
-    grid-template-columns:repeat(2,1fr);
-
-    gap:12px;
-  }
-
   .logoCard{
     height:120px;
   }
 
-  .universityCard{
-    height:76px;
-
-    padding:12px;
-  }
-
-  .universityLogo{
-    max-width:92px;
-
-    max-height:36px;
+  .logo{
+    max-width:130px;
   }
 }
 
@@ -415,18 +293,6 @@
 
   .bottomCard{
     padding:24px;
-  }
-
-  .universityGrid{
-    grid-template-columns:1fr 1fr;
-  }
-
-  .universityCard{
-    height:70px;
-  }
-
-  .universityLogo{
-    max-width:82px;
   }
 
   .logo{
