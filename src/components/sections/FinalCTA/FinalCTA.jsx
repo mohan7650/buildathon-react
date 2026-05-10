@@ -17,10 +17,7 @@ export default function FinalCTA() {
           <div className={styles.inner}>
 
             {/* Eyebrow */}
-            <span
-              className="eyebrow"
-              style={{ marginBottom: '28px' }}
-            >
+            <span className="eyebrow">
               <span className="dot" />
               Applications Open
             </span>

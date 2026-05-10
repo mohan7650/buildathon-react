@@ -1,0 +1,233 @@
+/* ============================================
+   BUILDATHON — Partners Section
+   components/sections/Partners/Partners.module.css
+   ============================================ */
+
+.section {
+  position: relative;
+  overflow: hidden;
+
+  padding: 96px 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(37, 99, 235, 0.1),
+      transparent 60%
+    ),
+    #050816;
+
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* ============================================
+   Heading
+   ============================================ */
+
+.heading {
+  text-align: center;
+  margin-bottom: 48px;
+
+  color: #3b82f6;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+}
+
+/* ============================================
+   Marquee Wrapper
+   ============================================ */
+
+.marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* ============================================
+   Animated Track
+   ============================================ */
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+
+  width: max-content;
+
+  animation: scroll 42s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+/* ============================================
+   Sponsor Card
+   ============================================ */
+
+.card {
+  width: 190px;
+  height: 96px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  padding: 16px;
+
+  border-radius: var(--r-md);
+
+  background: rgba(255, 255, 255, 0.015);
+
+  border: 1px solid rgba(255, 255, 255, 0.04);
+
+  opacity: 0.82;
+
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease,
+    background 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.card:hover {
+  opacity: 1;
+
+  transform: translateY(-3px);
+
+  background: rgba(255, 255, 255, 0.03);
+
+  border-color: rgba(255, 255, 255, 0.08);
+}
+
+/* ============================================
+   Logo
+   ============================================ */
+
+.logo {
+  max-width: 145px;
+  max-height: 54px;
+
+  width: auto;
+  height: auto;
+
+  object-fit: contain;
+
+  transition:
+    transform 0.25s ease,
+    opacity 0.25s ease,
+    filter 0.25s ease;
+}
+
+.card:hover .logo {
+  transform: scale(1.06);
+}
+
+/* ============================================
+   Rice Logo Special Fix
+   ============================================ */
+
+.riceLogo {
+  max-width: 175px;
+  max-height: 72px;
+
+  transform: scale(1.08);
+
+  filter: brightness(1.2);
+}
+
+/* ============================================
+   Optional Logo Name
+   ============================================ */
+
+.name {
+  display: none;
+}
+
+/* ============================================
+   Infinite Scroll Animation
+   ============================================ */
+
+@keyframes scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .track {
+    animation: none;
+  }
+}
+
+/* ============================================
+   Tablet
+   ============================================ */
+
+@media (max-width: 768px) {
+
+  .section {
+    padding: 64px 0;
+  }
+
+  .track {
+    gap: 48px;
+  }
+
+  .card {
+    width: 160px;
+    height: 82px;
+  }
+
+  .logo {
+    max-width: 120px;
+    max-height: 44px;
+  }
+
+  .riceLogo {
+    max-width: 145px;
+    max-height: 60px;
+  }
+
+}
+
+/* ============================================
+   Mobile
+   ============================================ */
+
+@media (max-width: 480px) {
+
+  .heading {
+    font-size: 11px;
+    letter-spacing: 0.28em;
+    line-height: 1.8;
+    padding: 0 16px;
+  }
+
+  .track {
+    gap: 24px;
+  }
+
+  .card {
+    width: 128px;
+    height: 64px;
+
+    padding: 10px;
+  }
+
+  .logo {
+    max-width: 96px;
+    max-height: 34px;
+  }
+
+  .riceLogo {
+    max-width: 108px;
+    max-height: 42px;
+  }
+
+}

@@ -15,11 +15,30 @@ export function useCountdown(targetTimestamp) {
   const intervalRef = useRef(null);
 
   useEffect(() => {
-    intervalRef.current = setInterval(() => {
-      setTimeLeft(computeTimeLeft(targetTimestamp));
-    }, 1000);
+    const start = () => {
+      intervalRef.current = setInterval(() => {
+        setTimeLeft(computeTimeLeft(targetTimestamp));
+      }, 1000);
+    };
 
-    return () => clearInterval(intervalRef.current);
+    const stop = () => clearInterval(intervalRef.current);
+
+    const onVisibility = () => {
+      if (document.hidden) {
+        stop();
+      } else {
+        setTimeLeft(computeTimeLeft(targetTimestamp));
+        start();
+      }
+    };
+
+    start();
+    document.addEventListener('visibilitychange', onVisibility);
+
+    return () => {
+      stop();
+      document.removeEventListener('visibilitychange', onVisibility);
+    };
   }, [targetTimestamp]);
 
   return timeLeft;

@@ -17,11 +17,9 @@ function CountdownItem({ value, label }) {
 }
 
 function StatItem({ number, label }) {
-  const isTextStat = number === 'Reveal Soon';
-
   return (
     <div className={styles.statItem}>
-      <div className={isTextStat ? `${styles.statNumber} ${styles.textStat}` : styles.statNumber}>
+      <div className={styles.statNumber}>
         {number}
       </div>
 
@@ -79,18 +77,20 @@ export default function Hero() {
           <span className={styles.metaItem}>👥 1,000+ ambitious builders</span>
         </div>
 
-        {!isExpired ? (
-          <div className={styles.countdown}>
-            <CountdownItem value={days} label="Days" />
-            <CountdownItem value={hours} label="Hours" />
-            <CountdownItem value={minutes} label="Minutes" />
-            <CountdownItem value={seconds} label="Seconds" />
-          </div>
-        ) : (
-          <div className={styles.countdownExpired}>
-            Event has begun — watch the recap
-          </div>
-        )}
+        <div aria-live="polite" aria-atomic="false">
+          {!isExpired ? (
+            <div className={styles.countdown}>
+              <CountdownItem value={days} label="Days" />
+              <CountdownItem value={hours} label="Hours" />
+              <CountdownItem value={minutes} label="Minutes" />
+              <CountdownItem value={seconds} label="Seconds" />
+            </div>
+          ) : (
+            <p className={styles.countdownExpired}>
+              Event has begun — watch the recap
+            </p>
+          )}
+        </div>
 
         <div className={styles.location}>
           Dallas, Texas · June 18–19, 2026

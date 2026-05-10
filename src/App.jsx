@@ -13,10 +13,10 @@ import { useReveal } from './hooks/useReveal';
 import Navbar from './components/layouts/Navbar/Navbar';
 import Footer from './components/layouts/Footer/Footer';
 import Hero from './components/sections/Hero/Hero';
+import Partners from './components/sections/Partners/Partners';
 import About from './components/sections/About/About';
 import Tracks from './components/sections/Tracks/Tracks';
 import Sponsors from './components/sections/Sponsors/Sponsors';
-import Community from './components/sections/Community/Community';
 import FAQ from './components/sections/FAQ/FAQ';
 import FinalCTA from './components/sections/FinalCTA/FinalCTA';
 import RequestAccess from './components/sections/RequestAccess/RequestAccess';
@@ -32,10 +32,10 @@ function HomePage() {
 
       <main>
         <Hero />
+        <Partners />
         <About />
         <Tracks />
         <Sponsors />
-        <Community />
         <FinalCTA />
         <RequestAccess />
         <FAQ />

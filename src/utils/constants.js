@@ -151,7 +151,7 @@ export const FOOTER_LINKS = {
   ],
 
   Network: [
-    { label: 'Alumni', href: '#community' },
+    { label: 'Alumni', href: '#' },
     { label: 'Sponsors', href: '#' },
     { label: 'Press kit', href: '#' },
   ],
