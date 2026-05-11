@@ -4,14 +4,22 @@
 
 import styles from './Sponsors.module.css';
 
+/* ============================================
+   Sponsor Logos
+============================================ */
+
 import lovableLogo from '../../../assets/logos/lovable.png';
 import tavilyLogo from '../../../assets/logos/Tavily.png';
 import seedlegalsLogo from '../../../assets/logos/SeedLegals.png';
 import redbullLogo from '../../../assets/logos/RedBull.png';
 
+/* ============================================
+   Sponsors
+============================================ */
+
 const sponsors = [
   {
-    name: 'Lovablel',
+    name: 'Lovable',
     logo: lovableLogo,
   },
   {
@@ -28,6 +36,10 @@ const sponsors = [
   },
 ];
 
+/* ============================================
+   Component
+============================================ */
+
 export default function Sponsors() {
   return (
     <section className={styles.section} id="sponsors">
@@ -35,6 +47,7 @@ export default function Sponsors() {
       <div className={styles.wrapper}>
 
         {/* LEFT */}
+
         <div className={styles.left}>
 
           <span className={styles.eyebrow}>
@@ -51,6 +64,7 @@ export default function Sponsors() {
         </div>
 
         {/* RIGHT */}
+
         <div className={styles.grid}>
 
           {sponsors.map((brand) => (
@@ -63,10 +77,13 @@ export default function Sponsors() {
                 src={brand.logo}
                 alt={brand.name}
                 className={styles.logo}
+                loading="lazy"
               />
 
             </div>
           ))}
+
+          {/* CTA CARD */}
 
           <a
             href="#private-access"
@@ -80,6 +97,7 @@ export default function Sponsors() {
       </div>
 
       {/* Bottom CTA */}
+
       <div className={styles.bottomCard}>
 
         <div>

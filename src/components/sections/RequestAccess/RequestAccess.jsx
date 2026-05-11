@@ -132,7 +132,7 @@ export default function RequestAccess() {
                   id="firstName"
                   name="firstName"
                   type="text"
-                  placeholder="Priya"
+                  placeholder="Shan"
                   value={formData.firstName}
                   onChange={handleChange}
                   autoComplete="given-name"
@@ -149,7 +149,7 @@ export default function RequestAccess() {
                   id="lastName"
                   name="lastName"
                   type="text"
-                  placeholder="Sharma"
+                  placeholder="Kumar"
                   value={formData.lastName}
                   onChange={handleChange}
                   autoComplete="family-name"

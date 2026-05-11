@@ -1,0 +1,192 @@
+/* ============================================
+   BUILDATHON — University Marquee
+   ============================================ */
+
+.section{
+  position:relative;
+
+  overflow:hidden;
+
+  padding:88px 0;
+
+  background:
+    radial-gradient(
+      circle at center,
+      rgba(37,99,235,.08),
+      transparent 60%
+    ),
+    #050816;
+
+  border-top:1px solid rgba(255,255,255,.05);
+
+  border-bottom:1px solid rgba(255,255,255,.05);
+}
+
+/* ============================================
+   Heading
+   ============================================ */
+
+.heading{
+  text-align:center;
+
+  margin-bottom:42px;
+
+  color:#3b82f6;
+
+  font-size:12px;
+
+  font-weight:700;
+
+  letter-spacing:.42em;
+
+  text-transform:uppercase;
+}
+
+/* ============================================
+   Marquee
+   ============================================ */
+
+.marquee{
+  position:relative;
+
+  overflow:hidden;
+
+  width:100%;
+}
+
+/* ============================================
+   Track
+   ============================================ */
+
+.track{
+  display:flex;
+
+  align-items:center;
+
+  gap:16px;
+
+  width:max-content;
+
+  animation:scroll 42s linear infinite;
+}
+
+.track:hover{
+  animation-play-state:paused;
+}
+
+/* ============================================
+   University Card
+   ============================================ */
+
+.card{
+  width:170px;
+
+  height:82px;
+
+  background:#ffffff;
+
+  border-radius:14px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:14px;
+
+  flex-shrink:0;
+
+  transition:
+    transform .28s ease,
+    box-shadow .28s ease;
+}
+
+.card:hover{
+  transform:translateY(-3px);
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.18);
+}
+
+/* ============================================
+   Logos
+   ============================================ */
+
+.logo{
+  max-width:110px;
+
+  max-height:42px;
+
+  width:auto;
+  height:auto;
+
+  object-fit:contain;
+}
+
+/* ============================================
+   Animation
+   ============================================ */
+
+@keyframes scroll{
+
+  from{
+    transform:translateX(0);
+  }
+
+  to{
+    transform:translateX(-50%);
+  }
+}
+
+/* ============================================
+   Tablet
+   ============================================ */
+
+@media(max-width:768px){
+
+  .section{
+    padding:72px 0;
+  }
+
+  .track{
+    gap:12px;
+  }
+
+  .card{
+    width:150px;
+
+    height:72px;
+  }
+
+  .logo{
+    max-width:92px;
+
+    max-height:36px;
+  }
+}
+
+/* ============================================
+   Mobile
+   ============================================ */
+
+@media(max-width:480px){
+
+  .heading{
+    font-size:10px;
+
+    letter-spacing:.28em;
+
+    line-height:1.8;
+
+    padding:0 16px;
+  }
+
+  .card{
+    width:130px;
+
+    height:66px;
+  }
+
+  .logo{
+    max-width:82px;
+  }
+}

@@ -10,27 +10,30 @@ export default function Tracks() {
 
   return (
     <section className={styles.section} id="tracks">
+      <div className="container">
 
-      {/* Top Content */}
-      <div className={styles.top}>
+        {/* Top Content */}
+        <div className={styles.top}>
 
-        <span className={styles.eyebrow}>
-          Tracks
-        </span>
+          <span className={styles.eyebrow}>
+            Tracks
+          </span>
 
-        <h2 className={styles.title}>
-          Build what actually matters.
-        </h2>
+          <h2 className={styles.title}>
+            Build what actually matters.
+          </h2>
 
-        <p className={styles.desc}>
-          Every team receives a real-world problem statement.
-          Choose a track, build a solution, and ship something
-          people would actually use.
-        </p>
+          <p className={styles.desc}>
+            Every team receives a real-world problem statement.
+            Choose a track, build a solution, and ship something
+            people would actually use.
+          </p>
+
+        </div>
 
       </div>
 
-      {/* Tracks Grid */}
+      {/* Tracks Grid — full-width within section, own container */}
       <div className={styles.grid}>
 
         {TRACKS.map((track) => (

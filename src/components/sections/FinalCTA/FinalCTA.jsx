@@ -17,10 +17,7 @@ export default function FinalCTA() {
           <div className={styles.inner}>
 
             {/* Eyebrow */}
-            <span
-              className="eyebrow"
-              style={{ marginBottom: '28px' }}
-            >
+            <span className="eyebrow">
               <span className="dot" />
               Applications Open
             </span>
@@ -93,9 +90,7 @@ export default function FinalCTA() {
             {/* Meta */}
             <div className={styles.meta}>
 
-              <span>
-                Applications close Feb 14
-              </span>
+              
 
               <span aria-hidden="true">
                 •
