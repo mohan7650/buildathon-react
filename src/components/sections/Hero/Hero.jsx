@@ -43,7 +43,7 @@ export default function Hero() {
       <div className={`container ${styles.heroInner}`}>
         <span className={styles.badge}>
           <span className={styles.pill}>LIVE</span>
-          Applications open · 24-hour build sprint · Dallas, TX
+          Applications open · 32-hour build sprint · Dallas, TX
         </span>
 
         <h1 className={styles.title}>
@@ -54,9 +54,9 @@ export default function Hero() {
         <p className={styles.tagline}>Build. Match. Ship.</p>
 
         <p className={styles.sub}>
-          A curated build sprint for ambitious founders, engineers, and designers.
-          Form a team, choose a track, and ship something people remember —
-          in <strong> 24 hours.</strong>
+          A curated <strong>32-hour</strong> experience for ambitious builders.Build with intention.
+          Match with founders, engineers, and high-impact operators.
+          Ship products that people remember.
         </p>
 
         <div className={styles.ctas}>
@@ -70,7 +70,7 @@ export default function Hero() {
         </div>
 
         <div className={styles.meta}>
-          <span className={styles.metaItem}>⏱ 24 hours, end-to-end</span>
+          <span className={styles.metaItem}>⏱ 32 hours, Build-to-Ship</span>
           <span className={styles.sep} />
           <span className={styles.metaItem}>📍 Dallas, TX</span>
           <span className={styles.sep} />

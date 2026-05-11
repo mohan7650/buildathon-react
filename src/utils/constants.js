@@ -94,7 +94,7 @@ export const TRACKS = [
   {
     num: '09',
     name: 'Deployment & MLOps',
-    desc: 'Containers, serving, monitoring. From notebook to production in 24 hours.',
+    desc: 'Containers, serving, monitoring. From notebook to production in 32 hours.',
     tags: ['Become a Sponsor '],
   },
 

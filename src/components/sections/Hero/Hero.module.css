@@ -365,7 +365,10 @@
 
 /* ── Mobile 520px ── */
 
+/* ── Mobile 520px ── */
+
 @media (max-width: 520px) {
+
   .hero {
     padding: 88px 0 48px;
   }
@@ -392,6 +395,37 @@
     border-right: 1px solid rgba(255, 255, 255, .06) !important;
   }
 
+  /* ============================================
+     UPDATED COUNTDOWN MOBILE FIX
+     ============================================ */
+
+  .countdown {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    width: 100%;
+  }
+
+  .countItem {
+    width: 100%;
+    min-width: 0;
+    padding: 14px 8px;
+    border-radius: 20px;
+  }
+
+  .countNum {
+    font-size: clamp(30px, 7vw, 40px);
+  }
+
+  .countLabel {
+    font-size: 10px;
+    letter-spacing: .18em;
+  }
+
+  /* ============================================
+     Hero Typography
+     ============================================ */
+
   .title {
     font-size: clamp(44px, 13vw, 72px);
   }
@@ -405,6 +439,10 @@
     font-size: var(--text-base);
   }
 
+  /* ============================================
+     CTA Buttons
+     ============================================ */
+
   .ctas {
     flex-direction: column;
     align-items: stretch;
@@ -412,6 +450,7 @@
     width: 100%;
     max-width: 320px;
   }
+
 }
 
 /* ── Reduced motion ── */

@@ -90,9 +90,7 @@ export default function FinalCTA() {
             {/* Meta */}
             <div className={styles.meta}>
 
-              <span>
-                Applications close Feb 14
-              </span>
+              
 
               <span aria-hidden="true">
                 •

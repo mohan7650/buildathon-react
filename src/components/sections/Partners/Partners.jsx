@@ -72,7 +72,7 @@ export default function Partners() {
       {/* Heading */}
 
       <div className={styles.heading}>
-        Featuring partners & participants from elite institutions
+        Participants from elite institutions
       </div>
 
       {/* Marquee */}
