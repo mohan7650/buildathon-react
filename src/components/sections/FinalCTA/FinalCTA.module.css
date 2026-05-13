@@ -82,11 +82,11 @@
   margin-top: 32px;
   display: flex;
   align-items: center;
-  gap: 24px;
+  gap: 10px;
   justify-content: center;
   flex-wrap: wrap;
   color: var(--text-mute);
-  font-size: var(--text-sm);
+  font-size: 12px;
   font-family: var(--font-mono);
   letter-spacing: 0.06em;
 }
@@ -102,15 +102,34 @@
 }
 
 @media (max-width: 760px) {
+
   .card {
     padding: 48px 24px;
     border-radius: var(--r-xl);
   }
 
   .meta {
-    flex-direction: column;
-    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 6px;
+
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    width: 100%;
+
+    font-size: 9px;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
   }
+
+  .meta span {
+    flex-shrink: 1;
+  }
+
 }
 
 @media (max-width: 480px) {
