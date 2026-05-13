@@ -87,7 +87,7 @@
   padding: 4px 8px;
   background: linear-gradient(180deg, #8b45f0, #6d28d9);
   border-radius: 999px;
-  font-size: 11px;
+  font-size: 9px;
   letter-spacing: .16em;
   text-transform: uppercase;
   font-weight: 600;
@@ -314,7 +314,12 @@
 
 /* ── Mobile 768px ── */
 
+/* ─────────────────────────────────────────────
+   TABLET — 768px
+───────────────────────────────────────────── */
+
 @media (max-width: 768px) {
+
   .hero {
     padding: 96px 0 64px;
   }
@@ -328,17 +333,43 @@
     padding: 16px 12px;
   }
 
+  /* ============================================
+     UPDATED META FIX
+     ============================================ */
+
   .meta {
-    flex-direction: column;
-    gap: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    gap: 6px;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    font-size: 10px;
+    font-family: 'Inter', sans-serif;
+
+    color: #94a3b8;
+  }
+
+  .metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    flex-shrink: 0;
   }
 
   .sep {
-    display: none;
+    display: block;
   }
 
   .statsShowcase {
-    /* Gutters so card doesn't bleed to screen edge */
     margin-top: 32px;
     border-radius: 24px;
   }
@@ -361,13 +392,20 @@
   .statItem:nth-last-child(-n+2) {
     border-bottom: none;
   }
+
 }
 
-/* ── Mobile 520px ── */
-
-/* ── Mobile 520px ── */
+/* ─────────────────────────────────────────────
+   MOBILE — 520px
+───────────────────────────────────────────── */
 
 @media (max-width: 520px) {
+
+  .badge {
+    font-size: 10px;
+    padding: 6px 10px 6px 6px;
+    gap: 6px;
+  }
 
   .hero {
     padding: 88px 0 48px;
@@ -420,6 +458,42 @@
   .countLabel {
     font-size: 10px;
     letter-spacing: .18em;
+  }
+
+  /* ============================================
+     UPDATED META FIX
+     ============================================ */
+
+  .meta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-wrap: nowrap;
+    white-space: nowrap;
+
+    gap: 4px;
+
+    width: 100%;
+    max-width: 100%;
+
+    overflow: hidden;
+
+    font-size: 8px;
+    font-family: 'Inter', sans-serif;
+
+    color: #94a3b8;
+  }
+
+  .metaItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    flex-shrink: 0;
+  }
+
+  .sep {
+    display: block;
   }
 
   /* ============================================
